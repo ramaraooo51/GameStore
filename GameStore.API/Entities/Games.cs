@@ -10,7 +10,7 @@ public class Games
     /*We need to define an association among name and genre */
 
     public int GenreId { get; set; }
-    public string Genre? Genre { get; set; }
+    public required Genre? Genre { get; set; }
 
     public decimal Price { get; set; }   
     public DateTime ReleaseDate { get; set; }   

@@ -1,23 +1,13 @@
 namespace GameStore.API.Dtos;
 
-public record GameDto(
-    int Id,
-    string Title,
-    string Genre,
-    decimal Price,
-    DateTime ReleaseDate
-)
+public record GameDto
 {
-    private int v;
-    private string name;
-    private DateOnly releaseDate;
+    public int Id { get; init; }
+    public string Title { get; init; } = "";
+    public string Genre { get; init; } = "";
+    public decimal Price { get; init; }
+    public DateOnly ReleaseDate { get; init; }
 
-    public GameDto(int v, string name, string genre, decimal price, DateOnly releaseDate)
-    {
-        this.v = v;
-        this.name = name;
-        Genre = genre;
-        Price = price;
-        this.releaseDate = releaseDate;
-    }
+    public GameDto(int id, string title, string genre, decimal price, DateOnly releaseDate)
+        => (Id, Title, Genre, Price, ReleaseDate) = (id, title, genre, price, releaseDate);
 }
