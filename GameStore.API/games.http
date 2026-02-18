@@ -1,4 +1,4 @@
-GET http://localhost:5282/games/1
+GET http://localhost:5282/games/3
 
 
 
@@ -8,7 +8,7 @@ POST http://localhost:5282/games
 Content-Type: application/json
 
 {
-    "title": "GTA San Andreas",
+    "title": "",
     "genre": "Open World",
     "price": 59.99,
     "ReleaseDate": "2004-10-10"
